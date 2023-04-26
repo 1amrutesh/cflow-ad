@@ -6,12 +6,12 @@ __all__ = ['get_args']
 
 def get_args():
     parser = argparse.ArgumentParser(description='CFLOW-AD')
-    parser.add_argument('--dataset', default='mvtec', type=str, metavar='D',
-                        help='dataset name: mvtec/stc (default: mvtec)')
+    parser.add_argument('--dataset', default='miad', type=str, metavar='D',
+                        help='dataset name: mvtec/stc/miad (default: miad)')
     parser.add_argument('--checkpoint', default='', type=str, metavar='D',
                         help='file with saved checkpoint')
     parser.add_argument('-cl', '--class-name', default='none', type=str, metavar='C',
-                        help='class name for MVTec/STC (default: none)')
+                        help='class name for MVTec/STC/MIAD (default: none)')
     parser.add_argument('-enc', '--enc-arch', default='wide_resnet50_2', type=str, metavar='A',
                         help='feature extractor: wide_resnet50_2/resnet18/mobilenet_v3_large (default: wide_resnet50_2)')
     parser.add_argument('-dec', '--dec-arch', default='freia-cflow', type=str, metavar='A',
